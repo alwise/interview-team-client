@@ -10,7 +10,7 @@ import { StoreProvider } from 'easy-peasy';
 import {store} from './Services';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <StoreProvider store={store}>
         <ThemeProvider
           breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
@@ -18,7 +18,7 @@ root.render(
         <App />
       </ThemeProvider>
     </StoreProvider>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

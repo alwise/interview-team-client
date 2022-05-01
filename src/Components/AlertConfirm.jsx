@@ -8,10 +8,9 @@ export default function AlertConfirm({title,variant,message,onClose ,callback}) 
     return (
       <>
         <Modal show={true} size="sm" variant={variant || "info"}>
-        <Modal.Header closeButton >
+        <Modal.Header  >
             <LogoTitle style={{fontSize: 9}} cardStyle={{marginRight: 5}} />
             <Modal.Title  style={{fontSize:14}}>{title}</Modal.Title>
-         
           </Modal.Header>
           <Modal.Body>
                 {message}
