@@ -7,12 +7,18 @@ The aim of the project is to create team and invite member to join team using a 
 # Demo
  The project demo can be found [here](https://teams.bookgmt.com).
 
-![App Screenshot](https://teamsprofile.s3.eu-west-1.amazonaws.com/screen-shots/Screen+Shot+2022-05-01+at+2.11.59+AM.png)
+![App Screenshot](https://teamsprofile.s3.eu-west-1.amazonaws.com/screen-shots/Screen+Shot+2022-05-01+at+2.19.46+AM.png)
+
 
 # Tech
 
- -ReactJS
+ - ReactJS
  - React-boostrap
+
+
+![App Screenshot](https://teamsprofile.s3.eu-west-1.amazonaws.com/screen-shots/Screen+Shot+2022-05-01+at+2.23.05+AM.png)
+
+
 
 This project makes request to it API [teams-api](https://github.com/alwise/interview-team-api).
 
