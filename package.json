@@ -1,6 +1,7 @@
 {
   "name": "interview-team-client",
   "version": "0.1.0",
+  "description": "Interview test for team management",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -37,9 +38,21 @@
       "react-app/jest"
     ]
   },
+  "author": {
+    "name": "Elvis Kemevor",
+    "email": "kemevoralwise@gmail.com",
+    "url": "https://elvis-profile.web.app/"
+  },
+  "badges": [
+      { 
+        "description": "github developer badge",
+       "href": "alwise",
+       "url": "https://github.com/alwise/"
+      }
+    ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/alwise/interview_team_client.git"
+    "url": "https://github.com/alwise/interview_team_client"
   },
   "browserslist": {
     "production": [

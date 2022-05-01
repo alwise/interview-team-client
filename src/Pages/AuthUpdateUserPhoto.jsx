@@ -36,14 +36,14 @@ export default function AuthUpdateUserPhoto() {
       const updateInfo = {
         uid:currentUser?.uid,
         name:currentUser?.name,
-        email:currentUser?.email
+        email:currentUser?.email,
+        profilePhoto : data?.location
       }
-      currentUser.profilePhoto = data?.location
-      Auth.setUserData(currentUser);
+     
       const result = await Auth.update({
       ...updateInfo,
-      profilePhoto:data?.location
     });
+    if(result?.status === true ) Auth.setUserData({...currentUser,...updateInfo});
     setData(result)
     setShow(true)
     setProgress(false)
@@ -78,10 +78,10 @@ export default function AuthUpdateUserPhoto() {
             onFileRemoved={(img) => runAfterImageDelete(img)}
             style={{ height: 200, width: 200, borderColor: 'grey' }}
             deleteIcon={
-              <i class="bi bi-x-lg m-2"></i>
+              <i className="bi bi-x-lg m-2"></i>
             }
             uploadIcon={
-              <i  class="bi bi-upload" style={{ fontWeight:700,fontSize:30 }}></i>
+              <i  className="bi bi-upload" style={{ fontWeight:700,fontSize:30 }}></i>
               
             }
           />

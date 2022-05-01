@@ -31,7 +31,8 @@ export default function AuthUpdateCredentials() {
             const currentData = {...Auth.getCurrentUser(),...values};
             Auth.setUserData(currentData);
             setTimeout(()=>{
-                window.location.reload();
+                if(result?.status === true)
+                    window.location.reload();
             },500)
         },
         

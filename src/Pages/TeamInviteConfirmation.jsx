@@ -17,15 +17,13 @@ export default function TeamInviteConfirmation() {
 
   const acceptInvite = async (user) =>{
     setShow(false)
-    const result = await TeamServices.acceptInvite({id:query.get('id')?.trim()});
-    console.log('Result of accept',result);
-    setData((result));
-    setShow(true)
-    // const existUser = result?.data;
-    //     if(!existUser?.email){
-    //       // existUser.email = user?.email
-    //       // setData((prev)=>prev.email = user?.email)
-    //     }
+     if(user?.token && user?.uid){
+       const result = await TeamServices.acceptInvite({id:query.get('id')?.trim()});
+       setData((result));
+       setShow(true)
+
+     }
+   
 
 
   }
@@ -38,7 +36,6 @@ export default function TeamInviteConfirmation() {
   const checkInviteeAlreadyHaveAccount = async() =>{
     setShow(false)
     const result = await TeamServices.validateInvite({id:query.get('id')});
-    console.log(result);
     setData(result);
     setShow(true)
     setTimeout(()=>{
@@ -51,7 +48,6 @@ export default function TeamInviteConfirmation() {
   const validateResultAndProceed = (user)=>{
     if(!user?.uid || !user?.token){
        MyRoute.to(navigate,MyRoute.home.subRoutes.signup.route, {replace:true,state:{user,from:loc.pathname.concat(loc.search)}})
-       console.log('validate for ni account',user)
     return ;
    }
     acceptInvite(user)
@@ -78,7 +74,7 @@ export default function TeamInviteConfirmation() {
                     <i style={{ fontSize:14 }}>Already have account? <TextButton value={'Sign in'} callBack={toLogin} /></i> 
             </div>
 
-            {show && <AlertMessage success={data?.status} message={data?.message} callBack={()=>{}}  />}
+            {show && <AlertMessage success={data?.status} message={data?.message} callBack={()=>{setShow(false)}}  />}
         
             </Card.Body>
            

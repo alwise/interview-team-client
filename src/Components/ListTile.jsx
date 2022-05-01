@@ -3,8 +3,8 @@ import {  Image } from "react-bootstrap";
 import { TextButton } from "./Buttons";
 import AlertConfirm from './AlertConfirm';
 import { AuthenticationService as Auth } from "../Services";
-const imgPlaceholder =
-  "https://www.kindpng.com/picc/m/24-248253_user-profile-default-image-png-clipart-png-download.png";
+import { ResourceLocations } from "../Utilities";
+
 export default function ListTile({uid, name, email, photoUrl, handleDelete,callback,isAdmin }) {
   const [showConfirm, setShowConfirm] = useState(false);
 
@@ -34,7 +34,7 @@ export default function ListTile({uid, name, email, photoUrl, handleDelete,callb
               fluid
               width={50}
               height={40}
-              src={photoUrl || imgPlaceholder}
+              src={photoUrl || ResourceLocations?.imgPlaceHolder}
               placeholder={"img"}
             />
           }

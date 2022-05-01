@@ -33,7 +33,6 @@ export default function AuthRegister() {
 
   useEffect(() => {
     setUser(state?.user);
-    // console.log(state);
     return () => {};
   }, []);
 
@@ -54,13 +53,16 @@ export default function AuthRegister() {
       Auth.setUserData(result?.data);
       setData(result);
       setShow(true);
-      if (result?.status === true && state?.from) {
-        setTimeout(() => toCompleteInvite(), 500);
-      }
-
       setTimeout(() => {
-        if (result?.status === true) toUserDashboard();
-      }, 600);
+        if (result?.status === true) {
+          if(state?.from){
+            toCompleteInvite();
+            return ;
+          }
+          toUserDashboard();
+        }
+      }, 800);
+
     },
   });
 

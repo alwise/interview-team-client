@@ -1,3 +1,3 @@
 import {Colors} from './ThemeUtils'
-
-export {Colors};
+import ResourceLocations from './ResourceLocations';
+export {Colors,ResourceLocations};
