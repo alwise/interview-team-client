@@ -5,9 +5,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+}
+
+body:before {
+  content: '';
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://teamsprofile.s3.eu-west-1.amazonaws.com/email/team.jpeg');
+  background-position: center center center center ;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
+  filter: blur(2px);
+  z-index: -9;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.f0f{
+    background-image: url('./asset/images/undraw_page_not_found_re_e9o6.svg');
+    width: 5rem;
+    height: 5rem;
+    /* background-color: ; */
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: contain;
+    /* margin: 0 auto; */
+  
 }

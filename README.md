@@ -1,3 +1,14 @@
+# About Project
+
+This project was developed using react so that things are kept simple and easy for me. 
+
+# Tech
+    -ReactJS
+    - React-boostrap
+
+This project makes request to it API @[teams-api]("https://github.com/alwise/interview-team-api")
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
