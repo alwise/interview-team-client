@@ -1,12 +1,20 @@
 # About Project
 
-This project was developed using react so that things are kept simple and easy for me. 
+This project was developed using react so that things are kept simple and easy for me.
+
+The aim of the project is to create team and invite member to join team using a link sent to their emails(invitee).
+
+# Demo
+ The project demo can be found [here](https://teams.bookgmt.com).
+
+![App Screenshot](https://teamsprofile.s3.eu-west-1.amazonaws.com/screen-shots/Screen+Shot+2022-05-01+at+2.11.59+AM.png)
 
 # Tech
-    -ReactJS
-    - React-boostrap
 
-This project makes request to it API @[teams-api]("https://github.com/alwise/interview-team-api")
+ -ReactJS
+ - React-boostrap
+
+This project makes request to it API [teams-api](https://github.com/alwise/interview-team-api).
 
 
 # Getting Started with Create React App
@@ -79,3 +87,28 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+## Roadmap
+
+- Add chatting 
+
+- Add video conferencing.
+
+- File sharing
+
+
+## Authors
+
+- [@alwise](https://www.github.com/alwise)
+
+
+## 🚀 About Me
+I'm a full stack developer...
+
+
+## Feedback
+
+If you have any feedback, please reach out to me @kemevoralwise@gmail.com
+
