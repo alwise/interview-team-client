@@ -6,8 +6,10 @@ import { TextButton} from './Buttons';
 import { MyRoute } from '../Helpers';
 import { useNavigate } from 'react-router-dom';
 import { ResourceLocations } from '../Utilities';
+import { useState } from 'react';
 
 export default function UserProfileSummary() {
+    const [image,setImage] = useState();
     const navigate = useNavigate();
     const signOut = () =>{
         Auth.logout()
@@ -15,6 +17,7 @@ export default function UserProfileSummary() {
     }
 
     useEffect(()=>{
+        setImage(Auth?.getCurrentUser()?.profilePhoto)
         // console.log(Auth.getCurrentUser());
     },[])
 
@@ -28,7 +31,7 @@ export default function UserProfileSummary() {
   return (
      <Card className='col text-center'>
             <Card.Body>
-            <Image style={{ maxWidth:'60%',maxHeight:'20%' }} roundedCircle rounded fluid  src={Auth?.getCurrentUser()?.profilePhoto || ResourceLocations?.imgPlaceHolder}  />
+            <Image  width={100} height={100} roundedCircle rounded src={image || ResourceLocations?.imgPlaceHolder}  />
                 <p><TextButton value={'Edit Profile'}
                 callBack={()=>MyRoute.to(navigate,MyRoute.dashboard.subRoutes.editProfile.route,{replace:true})}
                  style={{margin:3}}/> | <TextButton value={'Change photo'}

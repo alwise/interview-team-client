@@ -31,9 +31,10 @@ export default function ListTile({uid, name, email, photoUrl, handleDelete,callb
             <Image
             className="m-2"
               roundedCircle
-              fluid
+              rounded
+              // fluid
               width={50}
-              height={40}
+              height={50}
               src={photoUrl || ResourceLocations?.imgPlaceHolder}
               placeholder={"img"}
             />
@@ -54,10 +55,7 @@ export default function ListTile({uid, name, email, photoUrl, handleDelete,callb
         <AlertConfirm
           title={"Delete"}
           message={`Delete ${name} permanently? `}
-          onClose={()=>{
-            callback();
-            handleCloseConfirm();
-          }}
+          onClose={handleCloseConfirm}
           callback={handleDelete}
         />
       )}

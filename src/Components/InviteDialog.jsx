@@ -36,8 +36,11 @@ export default function InviteEmail({callback,team}) {
             setData(result)
             setShow(true)
             setTimeout(()=>{
-                if(result?.status === true){ formik.resetForm()};
-            },500)
+                if(result?.status === true){
+                   formik.resetForm();
+                   callback();
+                  };
+            },1500)
         },
         
       });
